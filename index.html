@@ -83,11 +83,21 @@
 </head>
 <body>
 
-  <!-- 🎵 Audio: only janu.mp3 -->
-  <audio id="bgMusic" src="janu.mp3" loop></audio>
+  <h3 onclick="playMusic()">Click Me to Play Audio 🎵</h3>
 
-  <!-- 🖱 Click this to manually play -->
-  <h3 onclick="playMusic()">🦋્͡🌺᭄ജാനകി ❰🌺᭄</h3>
+<audio id="bgMusic" src="janu-audio.mp3" loop></audio>
+
+<script>
+  function playMusic() {
+    const audio = document.getElementById("bgMusic");
+    audio.play().then(() => {
+      console.log("Audio playing");
+    }).catch((err) => {
+      console.error("Audio play failed:", err);
+    });
+  }
+</script>
+
 
   <div class="container">
     <div class="calculator">
